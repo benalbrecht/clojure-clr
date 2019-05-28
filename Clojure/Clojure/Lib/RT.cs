@@ -662,10 +662,9 @@ namespace clojure.lang
 
             // load spec
             {
-                string baseDir = AppDomain.CurrentDomain.BaseDirectory;
 
-                Assembly.LoadFile(Path.Combine(baseDir, "clojure.spec.alpha.dll"));
-                Assembly.LoadFile(Path.Combine(baseDir, "clojure.core.specs.alpha.dll"));
+                Assembly.Load("clojure.spec.alpha, Version=0.1.143.0, Culture=neutral, PublicKeyToken=null"));
+                Assembly.Load("clojure.core.specs.alpha, Version=0.1.24.0, Culture=neutral, PublicKeyToken=null"));
             }
 
             PostBootstrapInit();
